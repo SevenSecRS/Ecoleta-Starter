@@ -1,13 +1,35 @@
+:root {
+    --title-color: #47336e;
+    --primary-color: #239958;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html {
     font-family: 'Roboto', sans-serif;
 }
 
 body {
     background: #f0f0f5;
+    webkit-font-smoothing: antialiased;
 }
 
 a {
     text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--title-color);
+    text-shadow: 2px 2px 32px #2f2249;
 }
 
 #page-home {
@@ -19,7 +41,10 @@ a {
 #page-home .content {
     width: 90%;
     max-width: 1100px;
+    height: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 #page-home header {
@@ -31,8 +56,16 @@ a {
 
 #page-home header a {
     display: flex;
-    color: #322153;
+    color: var(--title-color);
     font-weight: 700;
+    text-shadow: 2px 2px 16px #2f2249;
+    transition: 300ms;
+}
+
+#page-home header a:hover {
+    transition: 700ms all;
+    transform: scale(1.05);
+    color: #563b8d;
 }
 
 #page-home header a span {
@@ -45,9 +78,80 @@ a {
 
 #page-home main {
     max-width: 560px;
+    flex: 1;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #page-home main h1 {
     font-size: 54px;
-    color: #322153;
+}
+
+#page-home main p {
+    font-size: 24px;
+    line-height: 38px;
+    margin-top: 24px;
+}
+
+#page-home main a {
+    width: 100%;
+    max-width: 360px;
+    background-color: #1b854c;
+    height: 72px;
+    border-radius: 8px;
+    align-items: center;
+    display: flex;
+    margin-top: 40px;
+    transition: 300ms;
+    font-weight: bold;
+}
+
+#page-home main a:hover {
+    transition: 700ms all;
+    transform: scale(1.05);
+}
+
+#page-home main a span {
+    background-color: var(--primary-color);
+    width: 72px;
+    height: 72px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-home main a span::after {
+    content: "";
+    background-image: url(../assets/search.svg);
+    width: 20px;
+    height: 20px;
+}
+
+#page-home main a strong {
+    flex: 1;
+    color: #f0f0f9;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    #page-home {
+        background-position-x: 70vw;
+    }
+    #page-home .content {
+        align-items: center;
+        text-align: center;
+    }
+    #page-home header a {
+        position: absolute;
+        bottom: 48px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    #page-home main {
+        align-items: center;
+    }
 }
