@@ -1,6 +1,6 @@
 :root {
     --title-color: #47336e;
-    --primary-color: #239958;
+    --primary-color: #155f36;
 }
 
 * {
@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    background: #f0f0f5;
+    background: #edeaf1;
     webkit-font-smoothing: antialiased;
 }
 
@@ -58,7 +58,6 @@ h6 {
     display: flex;
     color: var(--title-color);
     font-weight: 700;
-    text-shadow: 2px 2px 16px #2f2249;
     transition: 300ms;
 }
 
@@ -98,23 +97,25 @@ h6 {
 #page-home main a {
     width: 100%;
     max-width: 360px;
-    background-color: #1b854c;
+    background-color: var(--primary-color);
     height: 72px;
     border-radius: 8px;
     align-items: center;
     display: flex;
     margin-top: 40px;
     transition: 300ms;
+    opacity: 0.7;
     font-weight: bold;
 }
 
 #page-home main a:hover {
+    opacity: 0.9;
     transition: 700ms all;
     transform: scale(1.05);
 }
 
 #page-home main a span {
-    background-color: var(--primary-color);
+    background-color: #165331;
     width: 72px;
     height: 72px;
     border-top-left-radius: 8px;
